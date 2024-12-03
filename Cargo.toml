@@ -20,8 +20,7 @@ serde_json = "1.0.99"
 tokio = { version = "1.41.1", features = ["macros"] }
 tracing = { version = "0.1.37", features = ["log"] }
 tracing-subscriber = { version = "0.3.17", default-features = false, features = ["fmt", "env-filter"] }
-libc = "0.2.40"
-
+libc = "0.2.97"
 [features]
 aws_configured = []
 
