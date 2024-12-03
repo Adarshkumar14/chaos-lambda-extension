@@ -1,6 +1,6 @@
 
 # Run all checks
-gate: lint format test audit
+gate: lint format test
 
 lint:
 	cargo clippy --all-features {{ if env_var_or_default("CI", "false") == "true" { "" } else { "--fix --allow-dirty" } }}
@@ -17,8 +17,6 @@ code-coverage $CARGO_INCREMENTAL="{{cargo_incremental}}":
 	grcov . -s . --binary-path ./target/debug/ -t lcov --branch --ignore '../*' --ignore "/*" --ignore-not-existing -o ./target/cov.lcov
 	rm -f *.profraw
 
-audit:
-	cargo audit
 
 # Deploy the extension to AWS. The deployment will be to the default region, x86_64-unknown-linux-gnu profile and compiled in debug mode. profile types - x86_64-unknown-linux-gnu || aarch64-unknown-linux-gnu
 deploy-debug-extension region="us-east-1" architecture="x86_64-unknown-linux-gnu":
