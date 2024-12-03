@@ -10,9 +10,9 @@ keywords = ["AWS", "Lambda", "API", "Rust"]
 readme = "README.md"
 
 [dependencies]
-anyhow = "1.0.71"
+anyhow = "1.0.92"
 axum = "0.6.19"
-lambda-extension = "0.8.1"
+lambda-extension = "0.11.0"
 lazy_static = "1.4.0"
 rand = "0.8.5"
 reqwest = { version = "0.11.18", features = ["native-tls-vendored", "json", "serde_json"] }
