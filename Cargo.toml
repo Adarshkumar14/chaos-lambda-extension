@@ -17,9 +17,10 @@ lazy_static = "1.4.0"
 rand = "0.8.5"
 reqwest = { version = "0.11.18", features = ["native-tls-vendored", "json", "serde_json"] }
 serde_json = "1.0.99"
-tokio = { version = "1.29.1", features = ["macros"] }
+tokio = { version = "1.41.1", features = ["macros"] }
 tracing = { version = "0.1.37", features = ["log"] }
 tracing-subscriber = { version = "0.3.17", default-features = false, features = ["fmt", "env-filter"] }
+libc = "0.2.40"
 
 [features]
 aws_configured = []

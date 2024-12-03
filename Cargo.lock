@@ -236,6 +236,7 @@ dependencies = [
  "axum",
  "lambda-extension",
  "lazy_static",
+ "libc",
  "rand 0.8.5",
  "reqwest",
  "serde_json",
