@@ -10,21 +10,22 @@ keywords = ["AWS", "Lambda", "API", "Rust"]
 readme = "README.md"
 
 [dependencies]
-anyhow = "1.0.92"
-axum = "0.6.19"
+anyhow = "1.0.73" 
+axum = "0.6.20"   
 lambda-extension = "0.11.0"
-lazy_static = "1.4.0"
-rand = "0.8.5"
-reqwest = { version = "0.11.18", features = ["native-tls-vendored", "json", "serde_json"] }
-serde_json = "1.0.99"
+lazy_static = "1.4.0" 
+rand = "0.8.5"    
+reqwest = { version = "0.11.18", features = ["native-tls-vendored", "json", "serde_json"] } 
+serde_json = "1.0.99" 
 tokio = { version = "1.41.1", features = ["macros"] }
-tracing = { version = "0.1.37", features = ["log"] }
-tracing-subscriber = { version = "0.3.17", default-features = false, features = ["fmt", "env-filter"] }
-libc = "0.2.97"
+tracing = { version = "0.1.38", features = ["log"] } 
+tracing-subscriber = { version = "0.3.18", default-features = false, features = ["fmt", "env-filter"] } 
+libc = "0.2.147" 
+
 [features]
 aws_configured = []
 
 [dev-dependencies]
-temp-env = { version = "0.3.4", features = ["async_closure"] }
-tower = { version = "0.4.13", features = ["util"] }
-wiremock = "0.5.19"
+temp-env = { version = "0.3.4", features = ["async_closure"] } 
+tower = { version = "0.5.1", features = ["util"] }
+wiremock = "0.5.19" 
