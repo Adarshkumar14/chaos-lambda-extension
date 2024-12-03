@@ -70,7 +70,7 @@ jobs:
         run: |
           mkdir dist
           cp "./target/lambda/extensions/$BIN_NAME" "dist/"
-      - uses: actions/upload-artifact@v2.2.4
+      - uses: actions/upload-artifact@v4
         with:
           name: bins-${{ matrix.target }}
           path: dist
@@ -123,11 +123,10 @@ jobs:
           done
 
       - name: Upload binaries to release
-        uses: actions/upload-artifact@v4
+        uses: svenstaro/upload-release-action@v2
         with:
-          repo_token: ${{ secrets.TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: dist/*
-          path: dist/*
           file_glob: true
           tag: ${{ steps.tagname.outputs.val }}
           overwrite: true
