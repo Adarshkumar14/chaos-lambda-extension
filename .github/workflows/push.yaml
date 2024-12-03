@@ -123,10 +123,11 @@ jobs:
           done
 
       - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
+        uses: actions/upload-artifact@v4
         with:
           repo_token: ${{ secrets.TOKEN }}
           file: dist/*
+          path: dist/*
           file_glob: true
           tag: ${{ steps.tagname.outputs.val }}
           overwrite: true
